@@ -1,0 +1,7 @@
+/*For every even numbered element, have a light yellow background.*/
+/*For every odd numbered element, have a light blue background.*/
+/*When you click on one of the person elements, a dotted border should appear around it.*/
+
+body {
+	background-color: lightgray;
+}
