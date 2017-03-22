@@ -3,5 +3,44 @@
 /*When you click on one of the person elements, a dotted border should appear around it.*/
 
 body {
-	background-color: lightgray;
+	background-color: #FFB6C1;
+}
+
+.cardDiv {
+	display: inline-block;
+	border: 2px solid #e261b7;
+	width: 300px;
+	min-height: 550px;
+	margin: 25px;
+	text-align: justify;
+	vertical-align: top;
+	
+}
+
+.cardDiv:nth-child(even) {
+	background-color: #f5f7b9;
+}
+
+.cardDiv:nth-child(odd) {
+	background-color: #c6e6ef;
+}
+
+.cardDiv img {
+	max-width: 250px;
+	min-height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.cardDiv header {
+	font-size: 25px;
+	text-align: center;
+	
+}
+
+.cardDiv p{
+	font-style: 18px;
+	text-align: center;
+
 }
