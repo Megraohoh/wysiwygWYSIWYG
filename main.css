@@ -1,14 +1,11 @@
-/*For every even numbered element, have a light yellow background.*/
-/*For every odd numbered element, have a light blue background.*/
-/*When you click on one of the person elements, a dotted border should appear around it.*/
-
+/*************MAIN STYLING*****************/
 body {
 	background-color: #FFB6C1;
 }
 
 .cardDiv {
 	display: inline-block;
-	border: 2px solid #e261b7;
+	/*border: 2px solid #e261b7;*/
 	width: 300px;
 	min-height: 550px;
 	margin: 25px;
@@ -44,3 +41,33 @@ body {
 	text-align: center;
 
 }
+
+
+/*************EVENT and ACTION STYLING*****************/
+
+.clicked{
+	border: 2px dotted #e261b7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
