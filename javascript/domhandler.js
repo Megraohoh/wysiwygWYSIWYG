@@ -85,39 +85,50 @@ writeToDom();
 ////////////////////////////////CLICK EVENT
 var selectedEl = document.getElementById("container");
 var inputField = document.getElementById("userInput");
+var selectedCard;
 
-
-selectedEl.addEventListener("click", clickOnCard) 
 
 function clickOnCard(e){
 
    if(e.target.classList.contains("cardDiv")){
-    console.log("grandparent");
+    e.target.classList.add("clicked");
+    // selectedCard = e.target.childNodes[2].childNodes[1].nodeValue;
+    console.log("parent");
+    // console.log(selectedCard);
    }
    else if(e.target.classList.contains("child")){
     e.target.parentNode.classList.add("clicked");
-    console.log("child");
+    selectedCard = e.target.parentNode.childNodes[2].childNodes[1];
+    console.log("child", e.target.childNodes);
+    // console.log(selectedCard);
    }
    else if(e.target.classList.contains("grandchild")){
    e.target.parentNode.classList.add("clicked");
-    console.log("grandchild");
+   // selectedCard = e.target.parentNode.parentNode.childNodes[2].childNodes[1];
+   console.log("grandchild");
+   // console.log(selectedCard);
   }
+
+  inputField.focus();
+
 };
 
 
 
-// When you click on one of the person elements, the text input should immediately 
-// gain focus so that you can start typing.
-
-// When there is a highlighted person element, and you begin typing in the input 
-// box, the person's biography should be immediately bound to what you are typing, 
-// letter by letter.
-
 //////////////////////////////KEY* EVENT
 
-inputField.addEventListener("keyup", function(){
-  
-})
+// inputField.addEventListener("keypress", function(){
+//   var editBio = selectedCard;
+//       editBio.innerHTML = "";
+// })
 
-// When you press the enter/return key when typing in the input field, then the content 
-// of the input field should immediately be blank.
+// inputField.addEventListener("keyup", function(){
+//       if (event.keyCode === 13) {
+//         userInput.value = "";    
+//       } 
+// });
+
+
+document.body.addEventListener("click", clickOnCard);
+
+
