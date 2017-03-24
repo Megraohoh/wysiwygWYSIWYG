@@ -7,7 +7,7 @@
 
 
 ### Final Result:
->  The style is a little basic, but that code is functioning well. 
+>  The style is a little basic, but the code is functioning well. 
 
 
 ![Top of Page Screenshot](https://raw.githubusercontent.com/Megraohoh/wysiwygWYSIWYG/wysiwyg/screenshots/WYSIWYG%20top%20of%20page.png)
@@ -17,8 +17,11 @@
 
 ### Technologies Used:
 >HTML
+<br>
 >CSS
+<br>
 >Vanilla Javascript
+<br>
 >Some bits of Bootsstrap
 
 ### How to run (Node must be installed on your machine):
