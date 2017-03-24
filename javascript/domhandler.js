@@ -60,7 +60,7 @@ var arrayWysiwyg = [
 
       newCard += `<div class="cardDiv" id="person--${i}">`;
       newCard += `<header class="arrayWysiwygTitle child"> ${arrayWysiwyg[i].title} </header>`;
-      newCard += `<img class="arrayWysiwygName grandchild" src="${arrayWysiwyg[i].url}">`;
+      newCard += `<img class="arrayWysiwygName child" src="${arrayWysiwyg[i].url}">`;
       newCard += `<p class="arrayWysiwygBio child"> ${arrayWysiwyg[i].bio}</p>`;
       newCard += `<p class="arrayWysiwygLife child"> ${arrayWysiwyg[i].lifespan.birth}" </p>`;
       newCard += `<p class="arrayWysiwygLife child"> ${arrayWysiwyg[i].lifespan.death}" </p>`;
@@ -74,7 +74,6 @@ var arrayWysiwyg = [
 
 function showMeTheCard(event){
   if(event.target.className === 'container'){
-    // console.log("event worked", event);
   }
 }
 
@@ -92,21 +91,20 @@ function clickOnCard(e){
 
    if(e.target.classList.contains("cardDiv")){
     e.target.classList.add("clicked");
-    // selectedCard = e.target.childNodes[2].childNodes[1].nodeValue;
-    console.log("parent");
-    // console.log(selectedCard);
+    selectedCard = e.target.childNodes[2];
+    
+   
    }
    else if(e.target.classList.contains("child")){
     e.target.parentNode.classList.add("clicked");
-    selectedCard = e.target.parentNode.childNodes[2].childNodes[1];
-    console.log("child", e.target.childNodes);
-    // console.log(selectedCard);
+    selectedCard = e.target.parentNode.childNodes[2];
+    
    }
    else if(e.target.classList.contains("grandchild")){
    e.target.parentNode.classList.add("clicked");
-   // selectedCard = e.target.parentNode.parentNode.childNodes[2].childNodes[1];
-   console.log("grandchild");
-   // console.log(selectedCard);
+   selectedCard = e.target.parentNode.parentNode.childNodes[2];
+   
+  
   }
 
   inputField.focus();
@@ -117,16 +115,19 @@ function clickOnCard(e){
 
 //////////////////////////////KEY* EVENT
 
-// inputField.addEventListener("keypress", function(){
-//   var editBio = selectedCard;
-//       editBio.innerHTML = "";
-// })
+inputField.addEventListener("keyup", function(){
 
-// inputField.addEventListener("keyup", function(){
-//       if (event.keyCode === 13) {
-//         userInput.value = "";    
-//       } 
-// });
+      if (event.keyCode === 13) {
+        inputField.value = "";    
+      } else if(selectedCard === undefined) {
+        alert("Hey Baby! Pick a Lady!! *wink*")
+
+      } else {
+        var editBio = selectedCard
+        editBio.innerHTML = inputField.value;
+
+      }
+});
 
 
 document.body.addEventListener("click", clickOnCard);
