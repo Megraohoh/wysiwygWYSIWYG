@@ -16,13 +16,10 @@
 ![Editing Bio Screenshot](https://raw.githubusercontent.com/Megraohoh/wysiwygWYSIWYG/wysiwyg/screenshots/WYSIWYG%20editing%20bio.png)
 
 ### Technologies Used:
->HTML
-<br>
->CSS
-<br>
->Vanilla Javascript
-<br>
->Some bits of Bootsstrap
+- HTML 
+- CSS
+- Vanilla Javascript
+- Some bits of Bootsstrap
 
 ### How to run (Node must be installed on your machine):
 ```
